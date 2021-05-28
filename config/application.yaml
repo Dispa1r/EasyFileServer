@@ -1,0 +1,12 @@
+server:
+  port: 8080
+datasource:
+  driverName: mysql
+  host: 192.168.15.130
+  port: 3306
+  dataBase: fileserver
+  username: root
+  password: root
+  charset: utf8
+  parseTime: True
+  loc: Local

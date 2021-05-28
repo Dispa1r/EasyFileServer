@@ -1,0 +1,32 @@
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/*_sk   conf/accounts/fabric_admin/account.key
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem   conf/accounts/fabric_admin/account.crt
+
+# 配置fabric_admin_org1 
+# 拷贝私钥
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/*_sk   conf/accounts/fabric_admin_org1/account.key
+# 拷贝证书
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem   conf/accounts/fabric_admin_org1/account.crt
+
+# 配置fabric_admin_org2 
+# 拷贝私钥
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/*_sk   conf/accounts/fabric_admin_org2/account.key
+# 拷贝证书
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org3.example.com-cert.pem   conf/accounts/fabric_admin_org3/account.crt
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org2.example.com/users/Admin@org3.example.com/msp/keystore/*_sk   conf/accounts/fabric_admin_org3/account.key
+# 拷贝证书
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/signcerts/Admin@org3.example.com-cert.pem   conf/accounts/fabric_admin_org3/account.crt
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem   conf/chains/fabric/orderer-tlsca.crt
+cp /home/fabric/Desktop/fcc/fcc/fabric-samples/first-network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt   conf/chains/fabric/org1-tlsca.crt
+
+# 拷贝org2证书
+cp xxxxxx/crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt   conf/chains/fabric/org2-tlsca.crt
+
+peer chaincode instantiate -o orderer.example.com:7050 --tls --cafile $ORDERER_CA -c '{"Args":["mychannel","Fabric1.4"]}' -n WeCrossHub -v 1620641521 -P "OR ('Org1MSP.peer','Org2MSP.peer')"  -C mychannel
+peer chaincode instantiate -o orderer.example.com:7050 --tls --cafile $ORDERER_CA -c '{"Args":["mychannel","Fabric1.4"]}' -n WeCrossProxy -v 1620645251 -P "OR ('Org1MSP.peer','Org2MSP.peer')"  -C mychannel
+
+
+sudo docker exec -e "CORE_PEER_LOCALMSPID=Org2MSP" \
+  -e "CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt" \
+  -e "CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp" \
+  -e "CORE_PEER_ADDRESS=peer0.org2.example.com:8051" \
+  -it cli bash
