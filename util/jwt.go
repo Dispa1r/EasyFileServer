@@ -66,5 +66,6 @@ func AuthMiddleware(token1 string,phone string) bool{
 	if global.DBEngine.Where("phone = ?",userId).First(&user).Error !=nil{
 		return false
 	}
+	//遇到一个小坑 值得记录一下
 	return true
 }

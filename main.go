@@ -44,9 +44,12 @@ func main(){
 	http.HandleFunc("/user/info",handle.HTTPInteceptor(handle.UserInfoHandler))
 	http.HandleFunc("/file/query",handle.HTTPInteceptor(handle.FileQueryHandler))
 	http.HandleFunc("/file/fastupload",handle.HTTPInteceptor(handle.TryFastUpload))
+	http.HandleFunc("/file/mpupload/init",handle.HTTPInteceptor(handle.InitMultiPartUpload))
+	http.HandleFunc("/file/mpupload/uppart",handle.HTTPInteceptor(handle.UploadPartHandler))
+	http.HandleFunc("/file/mpupload/complete",handle.HTTPInteceptor(handle.CompleteUploadHandler))
 	err :=http.ListenAndServe(":8080",nil)
 	if err!=nil{
-		fmt.Println("fail to start server")
+		fmt.Printf("fail to start server%v",err)
 	}
 
 }
