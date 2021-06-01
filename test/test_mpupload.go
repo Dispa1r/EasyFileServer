@@ -77,7 +77,7 @@ func multipartUpload(filename string, targetURL string, chunkSize int) error {
 
 func main() {
 	username := "17327190525"
-	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQaG9uZSI6IjE3MzI3MTkwNTI1IiwiZXhwIjoxNjIyMjM5MzY5LCJpYXQiOjE2MjIxODg5NjksImlzcyI6IkRpc3BhMXIiLCJzdWIiOiJ1c2VyIHRva2VuIn0.C6cGC-uz9O39rmq3-hU58-fqbPypXrZOu4UwvBcywL8"
+	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQaG9uZSI6IjE3MzI3MTkwNTI1IiwiZXhwIjoxNjIyNTYyOTcxLCJpYXQiOjE2MjI1MTI1NzEsImlzcyI6IkRpc3BhMXIiLCJzdWIiOiJ1c2VyIHRva2VuIn0.rXP40Ro-PEVdfdOiW4Ea7Qs8vwgxndS5iDwNppKQg9s"
 	filehash := "d1902852ccd4fb2d1c78423010b241f6149b305f"
 
 	// 1. 请求初始化分块上传接口

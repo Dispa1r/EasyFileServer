@@ -6,7 +6,7 @@ import (
 	"file_server/model"
 	"time"
 )
-//TODO: 使用redis存储token和关联表，qrcode login，手机号验证和登陆
+//TODO:qrcode login，手机号验证和登陆
 func OnUserFileUploadFinished(phone,filehash,filename string,filesize int64)bool{
 	UserFile := model.TblUserFile{
 		Status:     0,

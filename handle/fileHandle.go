@@ -23,6 +23,8 @@ func UploadHandler(w http.ResponseWriter, r *http.Request){
 		io.WriteString(w, string(data))
 
 	}else if r.Method=="POST"{
+		r.ParseForm()
+		phone :=r.Form.Get("phone")
 		file,head,err :=r.FormFile("file")
 		if err!=nil{
 			fmt.Println("fail to get data from file")
@@ -30,7 +32,7 @@ func UploadHandler(w http.ResponseWriter, r *http.Request){
 		}
 		fileMeta :=meta.FileMeta{
 			FileName: head.Filename,
-			Location: "./tmp/"+head.Filename,
+			Location: "./tmp/"+phone+"/"+head.Filename,
 		}
 
 
@@ -52,8 +54,6 @@ func UploadHandler(w http.ResponseWriter, r *http.Request){
 		fileMeta.FileSha =util.FileSha1(newFile)
 		fmt.Println(fileMeta)
 		meta.UpdateFileMeta(fileMeta)
-		r.ParseForm()
-		phone :=r.Form.Get("phone")
 		result := dao.OnUserFileUploadFinished(phone,fileMeta.FileSha,fileMeta.FileName,fileMeta.FileSize)
 		if result {
 			http.Redirect(w, r, "/file/upload/suc", http.StatusFound)

@@ -5,6 +5,7 @@ import (
 	"file_server/util"
 	"fmt"
 	"github.com/garyburd/redigo/redis"
+	"io/ioutil"
 	"math"
 	"net/http"
 	"os"
@@ -56,7 +57,7 @@ func UploadPartHandler(w http.ResponseWriter, r *http.Request) {
 	defer rConn.Close()
 
 	// 3. 获得文件句柄，用于存储分块内容
-	fpath := "/data/" + uploadID + "/" + chunkIndex
+	fpath := "./data/" + uploadID + "/" + chunkIndex
 	os.MkdirAll(path.Dir(fpath), 0744)
 	fd, err := os.Create(fpath)
 	if err != nil {
@@ -79,7 +80,7 @@ func UploadPartHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write(util.NewRespMsg(0, "OK", nil).JSONBytes())
 }
 
-//todo : 根据用户名称存储文件
+//1todo : 根据用户名称存储文件
 func CompleteUploadHandler(w http.ResponseWriter, r *http.Request){
 	rConn := rpool.RedisPool().Get()//连接池中获取
 	defer rConn.Close()
@@ -111,10 +112,49 @@ func CompleteUploadHandler(w http.ResponseWriter, r *http.Request){
 	if totalCount!=chunkCount{
 		w.Write(util.NewRespMsg(-2,"file not vaild",nil).JSONBytes())
 	}
-	//todo: 合并分块
+	//2todo:合并分块
+    mergeFile(upid,filename,totalCount)
 	fsize,_ := strconv.Atoi(filesize)
 	dao.UploadFileToDB(filehash,filename,"",int64(fsize))//更新文件表
 	dao.OnUserFileUploadFinished(phone,filehash,filename,int64(fsize))//更新用户文件表
 	w.Write(util.NewRespMsg(0,"OK",nil).JSONBytes())
 
+}
+
+func mergeFile(upid,filename string,num int){
+	path := "./data/"+upid+"/"+filename+".merge"
+	fii, err := os.OpenFile(path, os.O_CREATE|os.O_WRONLY|os.O_APPEND, os.ModePerm)
+	defer fii.Close()
+	if err != nil {
+		panic(err)
+		return
+	}
+	for i := 1; i <= int(num); i++ {
+		f, err := os.OpenFile("./data/"+upid+"/"+strconv.Itoa(int(i)), os.O_RDONLY, os.ModePerm)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		b, err := ioutil.ReadAll(f)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		fii.Write(b)
+		f.Close()
+		os.Remove("./data/"+upid+"/"+strconv.Itoa(int(i)))
+	}
+}
+
+func CancelMPUpload(w http.ResponseWriter, r *http.Request){
+	//如何取消 删除本地文件
+	// 清除redis缓存
+	r.ParseForm()
+	upid := r.Form.Get("uploadid")
+	dirpath := "./data/"+upid
+	os.RemoveAll(dirpath)
+	rConn := rpool.RedisPool().Get()//连接池中获取
+	defer rConn.Close()
+	rConn.Do("del","MP_"+upid)
+	w.Write(util.NewRespMsg(0,"OK",nil).JSONBytes())
 }

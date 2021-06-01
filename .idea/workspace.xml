@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a1d612b-9e07-424b-bcad-89bacb9c388b" name="Default Changelist" comment="" />
+    <list default="true" id="7a1d612b-9e07-424b-bcad-89bacb9c388b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/userfiledao.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/userfiledao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handle/fileHandle.go" beforeDir="false" afterPath="$PROJECT_DIR$/handle/fileHandle.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handle/multipart.go" beforeDir="false" afterPath="$PROJECT_DIR$/handle/multipart.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_mpupload.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_mpupload.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +40,14 @@
     </option>
   </component>
   <component name="GOROOT" path="D:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1sHvLgcFpZW5jOirH73z34qAAVv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,6 +100,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
@@ -80,67 +119,68 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621952338982" />
-    <state x="2625" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621306206142">
+    <state x="2625" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622512623802">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2625" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622512623802" />
     <state x="2625" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621306206142" />
-    <state width="1876" height="432" key="GridCell.Tab.0.bottom" timestamp="1622191894134">
+    <state width="1876" height="386" key="GridCell.Tab.0.bottom" timestamp="1622512548894">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="432" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622191894134" />
+    <state width="1876" height="386" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622512548894" />
     <state width="1877" height="393" key="GridCell.Tab.0.bottom/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621682790313" />
     <state width="1862" height="348" key="GridCell.Tab.0.bottom/0.40.1280.680/1920.40.1920.1040@0.40.1280.680" timestamp="1620565791287" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.40.1280.680/1920.40.1920.1040@1920.40.1920.1040" timestamp="1620544723436" />
     <state width="1237" height="441" key="GridCell.Tab.0.bottom/0.40.1280.680@0.40.1280.680" timestamp="1621387063104" />
-    <state width="1876" height="432" key="GridCell.Tab.0.center" timestamp="1622191894134">
+    <state width="1876" height="386" key="GridCell.Tab.0.center" timestamp="1622512548894">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="432" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622191894134" />
+    <state width="1876" height="386" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622512548894" />
     <state width="1877" height="393" key="GridCell.Tab.0.center/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621682790313" />
     <state width="1862" height="348" key="GridCell.Tab.0.center/0.40.1280.680/1920.40.1920.1040@0.40.1280.680" timestamp="1620565791287" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.40.1280.680/1920.40.1920.1040@1920.40.1920.1040" timestamp="1620544723436" />
     <state width="1237" height="441" key="GridCell.Tab.0.center/0.40.1280.680@0.40.1280.680" timestamp="1621387063104" />
-    <state width="1876" height="432" key="GridCell.Tab.0.left" timestamp="1622191894134">
+    <state width="1876" height="386" key="GridCell.Tab.0.left" timestamp="1622512548894">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="432" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622191894134" />
+    <state width="1876" height="386" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622512548894" />
     <state width="1877" height="393" key="GridCell.Tab.0.left/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621682790313" />
     <state width="1862" height="348" key="GridCell.Tab.0.left/0.40.1280.680/1920.40.1920.1040@0.40.1280.680" timestamp="1620565791287" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.40.1280.680/1920.40.1920.1040@1920.40.1920.1040" timestamp="1620544723436" />
     <state width="1237" height="441" key="GridCell.Tab.0.left/0.40.1280.680@0.40.1280.680" timestamp="1621387063104" />
-    <state width="1876" height="432" key="GridCell.Tab.0.right" timestamp="1622191894134">
+    <state width="1876" height="386" key="GridCell.Tab.0.right" timestamp="1622512548894">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="432" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622191894134" />
+    <state width="1876" height="386" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622512548894" />
     <state width="1877" height="393" key="GridCell.Tab.0.right/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621682790313" />
     <state width="1862" height="348" key="GridCell.Tab.0.right/0.40.1280.680/1920.40.1920.1040@0.40.1280.680" timestamp="1620565791287" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.40.1280.680/1920.40.1920.1040@1920.40.1920.1040" timestamp="1620544723436" />
     <state width="1237" height="441" key="GridCell.Tab.0.right/0.40.1280.680@0.40.1280.680" timestamp="1621387063104" />
-    <state width="1876" height="383" key="GridCell.Tab.1.bottom" timestamp="1622191849001">
+    <state width="1876" height="383" key="GridCell.Tab.1.bottom" timestamp="1622192846242">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="383" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622191849001" />
+    <state width="1876" height="383" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622192846242" />
     <state width="1877" height="393" key="GridCell.Tab.1.bottom/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621682790313" />
     <state width="1862" height="348" key="GridCell.Tab.1.bottom/0.40.1280.680/1920.40.1920.1040@0.40.1280.680" timestamp="1620565791287" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.40.1280.680/1920.40.1920.1040@1920.40.1920.1040" timestamp="1620544727995" />
-    <state width="1876" height="383" key="GridCell.Tab.1.center" timestamp="1622191849001">
+    <state width="1876" height="383" key="GridCell.Tab.1.center" timestamp="1622192846242">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="383" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622191849001" />
+    <state width="1876" height="383" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622192846242" />
     <state width="1877" height="393" key="GridCell.Tab.1.center/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621682790313" />
     <state width="1862" height="348" key="GridCell.Tab.1.center/0.40.1280.680/1920.40.1920.1040@0.40.1280.680" timestamp="1620565791287" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.40.1280.680/1920.40.1920.1040@1920.40.1920.1040" timestamp="1620544727995" />
-    <state width="1876" height="383" key="GridCell.Tab.1.left" timestamp="1622191849001">
+    <state width="1876" height="383" key="GridCell.Tab.1.left" timestamp="1622192846242">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="383" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622191849001" />
+    <state width="1876" height="383" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622192846242" />
     <state width="1877" height="393" key="GridCell.Tab.1.left/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621682790313" />
     <state width="1862" height="348" key="GridCell.Tab.1.left/0.40.1280.680/1920.40.1920.1040@0.40.1280.680" timestamp="1620565791287" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.40.1280.680/1920.40.1920.1040@1920.40.1920.1040" timestamp="1620544727995" />
-    <state width="1876" height="383" key="GridCell.Tab.1.right" timestamp="1622191849001">
+    <state width="1876" height="383" key="GridCell.Tab.1.right" timestamp="1622192846242">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="383" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622191849001" />
+    <state width="1876" height="383" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1622192846242" />
     <state width="1877" height="393" key="GridCell.Tab.1.right/0.40.1280.680/1920.0.1920.1040@1920.0.1920.1040" timestamp="1621682790313" />
     <state width="1862" height="348" key="GridCell.Tab.1.right/0.40.1280.680/1920.40.1920.1040@0.40.1280.680" timestamp="1620565791287" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.40.1280.680/1920.40.1920.1040@1920.40.1920.1040" timestamp="1620544727995" />
@@ -172,7 +212,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/handle/multipart.go</url>
-          <line>48</line>
+          <line>49</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
@@ -187,17 +227,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/handle/multipart.go</url>
-          <line>50</line>
+          <line>51</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/handle/multipart.go</url>
-          <line>57</line>
+          <line>58</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/handle/multipart.go</url>
-          <line>59</line>
+          <line>60</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
